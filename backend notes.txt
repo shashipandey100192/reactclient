@@ -1,0 +1,13 @@
+backendapi
+=============================
+
+1) install( required for backend package)
+	npm init 	// generate package.json file
+	npm install express --save
+	npm install dotenv
+	npm install nodemon
+	npm install cors
+	npm install body-parser
+	npm install mongoose
+------------------------------------------
+1) about express : Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js	
