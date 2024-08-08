@@ -25,6 +25,11 @@ backendapi
 	2) import mongoose driver
 	2) create connection 
 ------------------------------------------
+6) create api
+	1) post api
+	
+
+
 
 										
 		
