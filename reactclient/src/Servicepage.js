@@ -1,6 +1,6 @@
-const api="http://localhost:5782/"
+// const api="http://localhost:5782/"
 
-export function Createapi()
-{
-    return `${api+createdata}`;
-}
+// export function Createapi()
+// {
+//     return `${api+createdata}`;
+// }
