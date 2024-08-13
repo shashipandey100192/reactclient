@@ -8,6 +8,7 @@ import Myloginpage from './modules/auth/Myloginpage';
 import Myregistorpage from './modules/auth/Myregistorpage';
 import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myhomepage from './modules/dashboard/Myhomepage';
+import Profilepage from './modules/dashboard/Profilepage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
         <Route path='registor' element={<Myregistorpage/>}></Route>
         <Route path='dashboard' element={<Mylandingpage/>}>
           <Route path='' element={<Myhomepage/>}/>
+          <Route path='view/:id' element={<Profilepage/>}/>
         
         </Route>
       </Routes>
