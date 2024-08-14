@@ -4,7 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoMdOpen } from "react-icons/io";
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 // const columns = [
 //     { field: 'id', headerName: 'sno', width: 70 },
@@ -44,7 +44,6 @@ import { Link, useParams } from 'react-router-dom';
 
 function Myhomepage() {
 
-
     const [mydata, setdata] = useState([])
 
     const columns = [
@@ -74,8 +73,7 @@ function Myhomepage() {
         axios.delete(`http://localhost:5782/deleterecord/${id}`).then((d) => {
             console.log(d.data);
             myalldata();
-          
-        }) ;
+        })
     }
 
 
@@ -127,8 +125,8 @@ function Myhomepage() {
                                         <td> <img src={d.profile} alt={d._id} width={50}/></td>
                                         <td>
                                         <Link class="badge text-bg-primary" to={`view/`+d._id}><IoMdOpen/></Link>
-                                        <span class="badge text-bg-warning"><FaEdit/></span>
-                                        <button type="button" class="badge text-bg-danger" onClick={mydeleterecord(d._id)}><MdDelete/></button>
+                                        <Link class="badge text-bg-warning" to={`edit/`+d._id}><FaEdit/></Link>
+                                        <button type="button" class="badge text-bg-danger" onClick={()=>{mydeleterecord(d._id)}}><MdDelete/></button>
                                         </td>
                                     </tr>
                                     )

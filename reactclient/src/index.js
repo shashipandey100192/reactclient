@@ -9,6 +9,7 @@ import Myregistorpage from './modules/auth/Myregistorpage';
 import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myhomepage from './modules/dashboard/Myhomepage';
 import Profilepage from './modules/dashboard/Profilepage';
+import Myeditreord from './modules/dashboard/Myeditreord';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
         <Route path='dashboard' element={<Mylandingpage/>}>
           <Route path='' element={<Myhomepage/>}/>
           <Route path='view/:id' element={<Profilepage/>}/>
+          <Route path='edit/:id' element={<Myeditreord/>}/>
         
         </Route>
       </Routes>
