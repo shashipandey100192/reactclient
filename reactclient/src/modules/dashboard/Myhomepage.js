@@ -5,6 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoMdOpen } from "react-icons/io";
 import { Link} from 'react-router-dom';
+import { backendurl } from '../../Servicepage';
 
 // const columns = [
 //     { field: 'id', headerName: 'sno', width: 70 },
@@ -58,7 +59,7 @@ function Myhomepage() {
     ];
 
     const myalldata = () => {
-        axios.get('http://localhost:5782/allusers').then((d) => {
+        axios.get(`${backendurl}/allusers`).then((d) => {
             console.log(d.data);
             setdata(d.data)
         })
@@ -70,7 +71,7 @@ function Myhomepage() {
 
 
     const mydeleterecord = (id)=>{
-        axios.delete(`http://localhost:5782/deleterecord/${id}`).then((d) => {
+        axios.delete(`${backendurl}/deleterecord/${id}`).then((d) => {
             console.log(d.data);
             myalldata();
         })

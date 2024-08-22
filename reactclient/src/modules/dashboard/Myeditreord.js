@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { backendurl } from '../../Servicepage';
 
 function Myeditreord() {
     const  usenav = useNavigate();
@@ -27,7 +28,7 @@ function Myeditreord() {
     }
 
     const singleuser = () => {
-        axios.get(`http://localhost:5782/singledata/${id}`).then((d) => {
+        axios.get(`${backendurl}/singledata/${id}`).then((d) => {
             console.log(d.data);
             setdata(d.data);
         })
@@ -39,7 +40,7 @@ function Myeditreord() {
 
     const updaterecord = async () => {
             const { fullname, email, phone, dob, gender, profile, course, pass } = insdata;
-            const mydata = await fetch(`http://localhost:5782/updaterecord/${id}`, {
+            const mydata = await fetch(`${backendurl}/updaterecord/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

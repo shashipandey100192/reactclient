@@ -1,6 +1,6 @@
-// const api="http://localhost:5782/"
+    // live env path
+export const backendurl = "https://webservice-ut0z.onrender.com";
 
-// export function Createapi()
-// {
-//     return `${api+createdata}`;
-// }
+    // local env path
+// export const backendurl = "http://localhost:5782";
+

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { Createapi } from '../../Servicepage';
+import { backendurl } from '../../Servicepage';
 
 
 function Myregistorpage() {
@@ -34,7 +34,7 @@ function Myregistorpage() {
         if (insdata.fullname.length>=5) {
 
             const { fullname, email, phone, dob, gender, profile, course, pass } = insdata;
-            const mydata = await fetch("http://localhost:5782/createdata", {
+            const mydata = await fetch(`${backendurl}/createdata`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

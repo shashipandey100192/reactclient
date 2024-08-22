@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import { backendurl } from '../../Servicepage'
 
 
 
@@ -9,7 +10,7 @@ function Profilepage() {
     const {id}= useParams()
 
     const singleuser = () => {
-        axios.get(`http://localhost:5782/singledata/${id}`).then((d) => {
+        axios.get(`${backendurl}/singledata/${id}`).then((d) => {
             console.log(d.data);
             setdatas(d.data);
         })

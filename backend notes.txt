@@ -28,6 +28,16 @@ backendapi
 6) create api
 	1) post api
 
+
+
+
+7) live (web service)
+	1) login render
+	2) new then web service
+	3) connect to github
+	4) node 	// change nodemon to node in package.json
+	
+	
 	
 
 
