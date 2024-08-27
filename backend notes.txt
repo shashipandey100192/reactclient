@@ -38,6 +38,38 @@ backendapi
 	4) node 	// change nodemon to node in package.json
 	
 	
+------------------------
+redux 
+==========
+Note: redux vs react-redux vs redux-toolkit
+	1) npm install @reduxjs/toolkit react-redux
+	2) create store file and config your store
+	3) wrap with whole application
+		provider , store
+	4) 
+	
+		
+
+
+
+
+
+
+
+configureStore
+reducer
+Provider
+store
+createSlice
+useSelector
+useDispatch
+dispatch
+state
+action
+
+
+
+
 	
 
 

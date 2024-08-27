@@ -10,11 +10,15 @@ import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myhomepage from './modules/dashboard/Myhomepage';
 import Profilepage from './modules/dashboard/Profilepage';
 import Myeditreord from './modules/dashboard/Myeditreord';
+import { Mystoredata } from './modules/reduxpage/Mystore';
+import { Provider } from 'react-redux'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={Mystoredata}>
     <BrowserRouter>
       <Routes>
         <Route path='' element={<Myloginpage />}></Route>
@@ -28,6 +32,6 @@ root.render(
       </Routes>
 
     </BrowserRouter>
-
+    </Provider>
   </React.StrictMode>
 );

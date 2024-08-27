@@ -4,8 +4,17 @@ import { TbPasswordFingerprint } from "react-icons/tb";
 import { Link, useNavigate } from 'react-router-dom';
 import { backendurl } from '../../Servicepage';
 
+import { useSelector,useDispatch } from 'react-redux';
+import { increment,decrement } from '../reduxpage/Myactions';
+
+
 
 function Myloginpage() {
+    const count = useSelector((state) => state.counter.value);
+    const dispatch10  = useDispatch();
+
+
+
     const usenav = useNavigate();
 
 
@@ -84,6 +93,8 @@ function Myloginpage() {
                                 <input type='reset' value="cancel" className='btn btn-danger ms-3' />
                                 <Link to="registor">New Registor</Link>
                                 <Link to="dashboard" className='btn'>dashboard</Link>
+                                {count}
+                                <button type='button' onClick={()=>dispatch10(increment())}>incre</button>
                             </div>
                         </div>
                     </div>

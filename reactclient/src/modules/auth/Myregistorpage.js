@@ -6,6 +6,7 @@ import { backendurl } from '../../Servicepage';
 function Myregistorpage() {
     const appNavigate = useNavigate();
 
+
     const updateinput = (e) => {
         const { name, value } = e.target;
         setdata((a) => {

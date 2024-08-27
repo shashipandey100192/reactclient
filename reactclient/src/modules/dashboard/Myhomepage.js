@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { IoMdOpen } from "react-icons/io";
 import { Link} from 'react-router-dom';
 import { backendurl } from '../../Servicepage';
+import { useSelector } from 'react-redux';
 
 // const columns = [
 //     { field: 'id', headerName: 'sno', width: 70 },
@@ -44,6 +45,7 @@ import { backendurl } from '../../Servicepage';
 
 
 function Myhomepage() {
+    const count = useSelector((state) => state.counter.value);
 
     const [mydata, setdata] = useState([])
 
@@ -91,6 +93,7 @@ function Myhomepage() {
                             <div class="card-header">Header</div>
                             <div class="card-body">
                                 <h5 class="card-title">Total User: {mydata.length}</h5>
+                                <p>{count}</p>
 
                             </div>
                         </div>
