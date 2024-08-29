@@ -55,7 +55,7 @@ function Myloginpage() {
         });
         const res = await mydata.json();
             console.log(res);
-            if(res.status===422)
+            if(res.status===423)
             {
                 alert("welcome to login page");
                 usenav('/dashboard');

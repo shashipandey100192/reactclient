@@ -48,14 +48,7 @@ Note: redux vs react-redux vs redux-toolkit
 		provider , store
 	4) 
 	
-		
-
-
-
-
-
-
-
+--------------------------
 configureStore
 reducer
 Provider
@@ -66,6 +59,13 @@ useDispatch
 dispatch
 state
 action
+
+
+jwt
+=========
+1) npm i jsonwebtoken
+2) npm i cookie-parser
+
 
 
 
