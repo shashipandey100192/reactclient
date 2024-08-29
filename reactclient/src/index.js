@@ -12,6 +12,7 @@ import Profilepage from './modules/dashboard/Profilepage';
 import Myeditreord from './modules/dashboard/Myeditreord';
 import { Mystoredata } from './modules/reduxpage/Mystore';
 import { Provider } from 'react-redux'
+import Mytexteditors from './modules/dashboard/components/Mytexteditors';
 
 
 
@@ -27,6 +28,8 @@ root.render(
           <Route path='' element={<Myhomepage/>}/>
           <Route path='view/:id' element={<Profilepage/>}/>
           <Route path='edit/:id' element={<Myeditreord/>}/>
+          <Route path='myeditor' element={<Mytexteditors/>}/>
+
         
         </Route>
       </Routes>
