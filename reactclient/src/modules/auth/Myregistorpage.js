@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import { backendurl } from '../../Servicepage';
 
 
@@ -45,8 +46,10 @@ function Myregistorpage() {
             const res = await mydata.json();
             console.log(res);
             if (res.status === 255) {
-                alert("data submit successfully");
-                appNavigate("/");
+                // alert("data submit successfully");
+                toast.success("user successfully login");
+                setTimeout(()=>{appNavigate("/")},5000);
+                
             }
             else if(res.status===450)
             {
@@ -134,6 +137,7 @@ function Myregistorpage() {
                     </div>
                 </div>
             </div>
+            <ToastContainer/>
         </form>
     )
 }

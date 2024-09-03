@@ -89,10 +89,10 @@ function Myhomepage() {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-3'>
-                        <div class="card text-bg-primary mb-3">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Total User: {mydata.length}</h5>
+                        <div className="card text-bg-primary mb-3">
+                            <div className="card-header">Header</div>
+                            <div className="card-body">
+                                <h5 className="card-title">Total User: {mydata.length}</h5>
                                 <p>{count}</p>
 
                             </div>
@@ -101,7 +101,7 @@ function Myhomepage() {
                 </div>
                 <div className='row'>
                     <div className='col-12'>
-                        <table class="table table-bordered border-primary">
+                        <table className="table table-bordered border-primary">
                             <thead>
                                 <tr>
                                     <th scope="col">Ids</th>
@@ -111,14 +111,14 @@ function Myhomepage() {
                                     <th scope="col">DOB</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Course</th>
-                                    <th scope="col">Profile</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col" width="100">Profile</th>
+                                    <th scope="col" style={{width:'150px'}}>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {mydata.map((d)=>{
+                                {mydata.map((d,a)=>{
                                     return(
-                                        <tr>
+                                        <tr key={d._id}>
                                         <th scope="row">{d._id}</th>
                                         <td>{d.fullname}</td>
                                         <td>{d.email}</td>
@@ -126,11 +126,11 @@ function Myhomepage() {
                                         <td>{d.dob}</td>
                                         <td>{d.gender}</td>
                                         <td>{d.course}</td>
-                                        <td> <img src={d.profile} alt={d._id} width={50}/></td>
+                                        <td> <img src={d.profile} alt={a++} width={50}/></td>
                                         <td>
-                                        <Link class="badge text-bg-primary" to={`view/`+d._id}><IoMdOpen/></Link>
-                                        <Link class="badge text-bg-warning" to={`edit/`+d._id}><FaEdit/></Link>
-                                        <button type="button" class="badge text-bg-danger" onClick={()=>{mydeleterecord(d._id)}}><MdDelete/></button>
+                                        <Link className="badge text-bg-primary" to={`view/`+d._id}><IoMdOpen/></Link>
+                                        <Link className="badge text-bg-warning" to={`edit/`+d._id}><FaEdit/></Link>
+                                        <button type="button" className="badge text-bg-danger" onClick={()=>{mydeleterecord(d._id)}}><MdDelete/></button>
                                         </td>
                                     </tr>
                                     )

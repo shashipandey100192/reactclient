@@ -68,6 +68,7 @@ jwt
 
 
 
+npm install @ckeditor/ckeditor5-react
 
 
 	

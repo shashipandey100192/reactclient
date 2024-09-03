@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import 'react-toastify/dist/ReactToastify.css';
 import "../src/assets/global.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Myloginpage from './modules/auth/Myloginpage';
@@ -13,6 +14,8 @@ import Myeditreord from './modules/dashboard/Myeditreord';
 import { Mystoredata } from './modules/reduxpage/Mystore';
 import { Provider } from 'react-redux'
 import Mytexteditors from './modules/dashboard/components/Mytexteditors';
+import MygraphPage from './modules/dashboard/components/Mygraphpage';
+
 
 
 
@@ -29,7 +32,7 @@ root.render(
           <Route path='view/:id' element={<Profilepage/>}/>
           <Route path='edit/:id' element={<Myeditreord/>}/>
           <Route path='myeditor' element={<Mytexteditors/>}/>
-
+          <Route path='mygrap' element={<MygraphPage/>}/>
         
         </Route>
       </Routes>

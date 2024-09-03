@@ -51,6 +51,7 @@
   {
     min-height: 80vh;
     max-height: fit-content;
+    overflow: scroll;
   }
   .m-page
   {

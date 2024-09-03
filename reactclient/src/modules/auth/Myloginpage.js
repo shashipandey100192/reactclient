@@ -92,9 +92,9 @@ function Myloginpage() {
                                 <input type='button' value="submit" className='btn btn-success' onClick={mylogin}/>
                                 <input type='reset' value="cancel" className='btn btn-danger ms-3' />
                                 <Link to="registor">New Registor</Link>
-                                <Link to="dashboard" className='btn'>dashboard</Link>
-                                {count}
-                                <button type='button' onClick={()=>dispatch10(increment())}>incre</button>
+                                {/* <Link to="dashboard" className='btn'>dashboard</Link> */}
+                                {/* {count}
+                                <button type='button' onClick={()=>dispatch10(increment())}>incre</button> */}
                             </div>
                         </div>
                     </div>

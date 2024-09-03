@@ -20,7 +20,6 @@ function Mylandingpage() {
                 <div className='border page'>
                     <Outlet/>
                 </div>
-
             <Myfooter/>
             </div>
             
