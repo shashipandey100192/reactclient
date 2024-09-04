@@ -61,3 +61,7 @@
   {
     background-color: aqua !important;
   }
+  .custom-model
+  {
+    z-index: 99 !important;
+  }
